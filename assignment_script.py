@@ -1,12 +1,12 @@
-
+##
 import pandas as pd
 import numpy as np
 import pymc as pm
 import arviz as az
 import matplotlib.pyplot as plt
 
-RANDOM_SEED = 123
-np.random.seed(RANDOM_SEED)
+Random_seed = 123
+np.random.seed(Random_seed)
 
 URL = "https://raw.githubusercontent.com/dustywhite7/Econ8310/master/AssignmentData/cookie_cats.csv"
 df = pd.read_csv(URL)
@@ -45,7 +45,7 @@ def ab_model(ret_col, sampler="nuts"):
                 2000,
                 tune=1000,
                 chains=2,
-                random_seed=RANDOM_SEED,
+                random_seed=Random_seed,
                 return_inferencedata=True
             )
         else:
@@ -54,7 +54,7 @@ def ab_model(ret_col, sampler="nuts"):
                 2000,
                 step=step,
                 chains=2,
-                random_seed=RANDOM_SEED,
+                random_seed=Random_seed,
                 return_inferencedata=True
             )
 
